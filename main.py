@@ -4,7 +4,10 @@ def hello_world():
 
 def add_numbers(a, b):
     """Новая функция для сложения двух чисел"""
-    return a + b
+    try:
+        return float(a) + float(b)
+    except ValueError:
+        return "Error: Both arguments must be numbers"
 
 def main():
     print(hello_world())
